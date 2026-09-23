@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef4ff, #f8fafc);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.contenedor {
+  width: min(1100px, 92%);
+  margin: 45px auto;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, #17365d, #2563eb);
+  color: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(23, 54, 93, 0.25);
+}
+
+.icono-titulo {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  font-size: 34px;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.encabezado p {
+  margin: 6px 0 0;
+  color: #dbeafe;
+  font-size: 15px;
+}
+
+/* TARJETA FORMULARIO */
+
+.tarjeta {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 150px;
+  gap: 15px;
+}
+
+form h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 10px;
+  font-size: 23px;
+  color: #17365d;
+}
+
+input {
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+form button {
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* SECCIÓN TABLA */
+
+.seccion-tabla {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.titulo-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.titulo-tabla h2 {
+  margin: 0;
+  color: #17365d;
+  font-size: 23px;
+}
+
+.titulo-tabla span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* TABLA */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th {
+  background: #17365d;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* BOTONES */
+
+td button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 7px;
+  transition: 0.2s;
+}
+
+td button:first-child {
+  background: #f59e0b;
+}
+
+td button:first-child:hover {
+  background: #d97706;
+}
+
+td button:last-child {
+  background: #ef4444;
+}
+
+td button:last-child:hover {
+  background: #dc2626;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .encabezado h1 {
+    font-size: 28px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-tabla {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 9px;
+  }
+}
